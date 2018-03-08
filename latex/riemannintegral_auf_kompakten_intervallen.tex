@@ -4,38 +4,89 @@ Satz: Stetige Funktionen auf kompakten Intervallen sind integrierbar. Linearitä
 
 
 \subsection{Linearität des Riemannintegrals (144)}
+$\text{Let } a ,b \in \mathbb { R } ,a \leq b ,I : = [ a ,b ]$.
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{144-theorem-10-11}.png}
-	\caption{144-theorem-10-11}
-	\label{144-theorem-10-11}
-\end{figure}
+The integral is linear: More precicely if $f ,g \in \mathcal { R } ( I ,\mathbb { K } ) \text{ and } \lambda ,\mu \in \mathbb { K } ,\text{ then } \lambda f + \mu g \in \mathcal { R } ( I ,\mathbb { K } )$ and 
+\begin{equation}
+\int ( \lambda f + \mu g ) = \lambda \int _ { I } f + \mu \int _ { I } g
+\end{equation}
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{144-theorem-10-11}.png}
+%	\caption{144-theorem-10-11}
+%	\label{144-theorem-10-11}
+%\end{figure}
 
 \subsection{Hauptsatz der Differential- und Integralrechnung (152)}
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{152-notation-10-18}.png}
-	\caption{152-notation-10-18}
-	\label{152-notation-10-18}
-\end{figure}
+\begin{leftbar}
+$\text{ If } a ,b \in \mathbb { R } ,a \leq b ,I : = [ a ,b ] ,f : I \rightarrow \mathbb { C }$, then denote
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{152-theorem-10-19}.png}
-	\caption{152-theorem-10-19}
-	\label{152-theorem-10-19}
-\end{figure}
+\noindent\begin{minipage}{.5\linewidth}
+\begin{equation}
+\begin{split}
+\int _ { a } ^ { b } f &: = \int _ { I } f, \\ 
+[ f ( t ) ] _ { a } ^ { b } &: = [ f ] _ { a } ^ { b } : = f ( b ) - f ( a )
+\end{split}
+\end{equation}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{equation}
+\begin{split}
+\int _ { b } ^ { a } f &: = - \int _ { a } ^ { b } f, \\
+[ f ( t ) ] _ { b } ^ { a } &: = [ f ] _ { b } ^ { a } : = f ( a ) - f ( b )
+\end{split}
+\end{equation}
+\end{minipage}%
+
+where $f \in \mathcal { R } ( I ,\mathbb { C } )$.
+
+\end{leftbar}
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{152-notation-10-18}.png}
+%	\caption{152-notation-10-18}
+%	\label{152-notation-10-18}
+%\end{figure}
+
+$\text{Let } a ,b \in \mathbb { R } ,a < b ,I : = [ a ,b ]$.
+\begin{enumerate}
+\item $\text{ If } f \in \mathcal { R } ( I ,\mathbb { K } )$ is continuous in $\xi \in I$, then, for each $c \in I$, the function
+\begin{equation}
+F _ { c } : I \rightarrow \mathbb { K } ,\quad F _ { c } ( x ) : = \int _ { c } ^ { x } f ( t ) d t,
+\end{equation}
+is \textbf{differentiable} in $\xi$ with $F _ { c } ^ { \prime } ( \xi ) = f ( \xi )$. In particular, if $f \in C ( I ,\mathbb { K } )$, then $F _ { c } \in C ^ { 1} ( I ,\mathbb { K } )$ and $F _ { c } ^ { \prime } ( x ) = f ( x )$ for each $x \in I$.
+
+\item If $F \in C ^ { 1} ( I ,\mathbb { K } )$ or, alternatively, $F : I \rightarrow \mathbb { K }$ is differentiable with integrable derivative $F ^ { \prime } \in \mathcal { R } ( I ,\mathbb { K } )$, then 
+\begin{equation}
+F ( b ) - F ( a ) = [ F ( t ) ] _ { a } ^ { b } = \int _ { a } ^ { b } F ^ { \prime } ( t ) \text{d} t,
+\end{equation}
+and
+\begin{equation}
+F ( x ) = F ( c ) + \int _ { c } ^ { x } F ^ { \prime } ( t ) d t \quad \text{ for each } c ,x \in I.
+\end{equation}
+
+\end{enumerate}
+
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{152-theorem-10-19}.png}
+%	\caption{152-theorem-10-19}
+%	\label{152-theorem-10-19}
+%\end{figure}
 
 \subsection{Definition der Stammfunktion (153)}
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{153-definition-10-20}.png}
-	\caption{153-definition-10-20}
-	\label{153-definition-10-20}
-\end{figure}
+$\text{ If } I \subseteq \mathbb { R } ,f : I \rightarrow \mathbb { K } ,\text{ and } F : I \rightarrow \mathbb { R }$ is a differentiable function with $F ^ { \prime } = f$, then $F$ is called a \textit{primitive} or \textit{antiderivative }of $f$.
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{153-definition-10-20}.png}
+%	\caption{153-definition-10-20}
+%	\label{153-definition-10-20}
+%\end{figure}
 
 \subsection{Partielle Integration (154)}
 

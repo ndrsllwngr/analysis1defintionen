@@ -107,3 +107,7 @@ ENV/
 *.gz
 
 *.toc
+
+latex/Analysis\+1\+-\+Defintionen\.cb
+
+latex/Analysis\+1\+-\+Defintionen\.cb2
