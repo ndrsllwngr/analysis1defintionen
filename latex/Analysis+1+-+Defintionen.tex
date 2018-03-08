@@ -77,55 +77,7 @@ Zur Bearbeitung der Aufgaben wird es dabei notwendig sein, in der Vorlesung erwo
 \fancyhead[LO,RE]{\leftmark}
 \fancyfoot[LE,RO]{\thepage}
 
-\section{Logik und Mengenlehre (4-21)}
-
-\subsection{Definition von logischer Negation, Konjunktion, Disjunktion, Implikation, Äquivalenz. (5f)}
-\begin{equation}
-\begin{split}
-\text{Negation} \qquad & \neg A \\
-\text{Konjunktion (and)}  \qquad & A \wedge B \\
-\text{Disjunktion (or)}  \qquad & A \vee B \\
-\text{Implikation}  \qquad & (A \Rightarrow B) \Leftrightarrow (\neg A \vee B) \Leftrightarrow (\neg B \Rightarrow \neg A) \\
-\text{Äquivalenz}  \qquad & (A \Leftrightarrow B) \Leftrightarrow ((A \Rightarrow B) \wedge (B \Rightarrow A))
-\end{split}
-\end{equation}
-
-\subsection{Bestimmung von Wahrheitswerten von Aussageformen.}
-
-\subsection{Definition von Gleichheit von Mengen, Teilmenge (Inklusion), Obermenge, Durchschnitt, Vereinigung, Differenz von Mengen, Komplement, Disjunktheit und disjunkte Vereinigung, Potenzmenge. (12ff)}
-\subsubsection{Gleichheit von Mengen}
-$M = N$ wenn alle Elemente von $N$ in $M$ vorkommen. $\Rightarrow$ Wir können nur Aussagen über Mengen treffen wenn wir alle ihre Elemente kennen. $\forall x \in M: x \in N \wedge \forall y \in N: y \in M$
-\subsubsection{Teilmenge (Inklusion)}
-$M \subseteq N$, wenn alle Elemente aus $M$ in $N$ vorkommen. $\forall x \in M: x \in N$ \\
-$M \subset N$, wenn Elemente in $N$ vorhanden sind, die in $M$ nicht vorkommen spricht man von einer echten Teilmenge. $\exists x \in N: x \notin M$
-
-\subsubsection{Obermenge}
-Ist $M \subseteq N$, dann ist $N$ die Obermenge von $M$.
-
-Ist $M$ Obermenge von $N$ und umgekehrt, so sind die Mengen äquivalent, $M = N$
-
-\subsubsection{Durschnitt}
-$M,N : x \in M \wedge x \in N$
-Der Durchschnitt zweier Mengen $M \cap N$ ist die Menge an Elementen, die in beiden Mengen $M$, $N$ vorkommen.
-
-\subsubsection{Vereinigung}
-$M,N: x \in M \vee x \in N$
-Die Vereinigung zweier Mengen $M \cup N$ ist die Menge an Elementen, die in entweder $M$ oder $N$ vorkommen.
-
-\subsubsection{Differenz von Mengen}
-Die Differenz zweier Mengen $M\setminus N$ ist die Menge an Elementen, die in $M$ vorkommen, aber nicht in $N$.
-$M,N : x \in M \wedge x \notin N$
-
-\subsubsection{Komplement}
-Ist Menge $N$ eine Teilmenge der Menge $M$ ($M \subseteq N$, $M$ ist Universum von $N$), dann wird $M \setminus N$ auch das Komplement $N$ zu $M$ genannt. $N^c := M \setminus N$
-
-\subsubsection{Disjunktheit und disjunkte Vereinigung}
-Ist der Durchschnitt zweier Mengen $M \cap N$ die leere Menge, so sind diese Mengen disjunkt. Die Vereinigung zweier disjunkter Mengen lautet dann eine disjunkte Vereinigung und wird $M \dot{\cup} N$ geschrieben.
-
-\subsubsection{Potenzmenge}
-Die Potenzmenge einer Menge ist die Menge aller Teilmengen:\\
-$M = \{0,1,2\}$, $\mathcal{P}(M)= \{\emptyset, \{0\}, \{1\}, \{2\}, \{0,1\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}$
-
+\include{logik_und_mengenlehre}
 
 \section{Funktionen und Relationen (21-33)}
   
