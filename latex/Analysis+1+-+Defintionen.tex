@@ -18,6 +18,7 @@
 %% 	Useful packages
 \usepackage{amsmath} 									% AMS mathematical facilities for LATEX
 \usepackage{graphicx}									% Enhanced support for graphics
+\usepackage{float}
 \usepackage{booktabs} 									% Publication quality tables in LATEX
 \usepackage{tabu}										% Flexible LATEX tabulars
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}	% Extensive support for hypertext in LATEX
@@ -74,12 +75,13 @@ Zur Bearbeitung der Aufgaben wird es dabei notwendig sein, in der Vorlesung erwo
 \pagenumbering{arabic}
 \setcounter{page}{1}
 % Geändertes Format für Seitenränder, arabische Seitenzahlen
-\fancyhead[LE,RO]{\rightmark}
+% \fancyhead[LE,RO]{\rightmark}
 \fancyhead[LO,RE]{\leftmark}
 \fancyfoot[LE,RO]{\thepage}
 
 \include{logik_und_mengenlehre}
 \include{funktionen_und_relationen}
+\include{induktion_rekursion_kardinalitaet}
 \include{reelle_und_komplexe_zahlen}
 \include{funktionsarithmetik_und_polynome}
 \include{konvergenz_reeller_und_komplexer_folgen}

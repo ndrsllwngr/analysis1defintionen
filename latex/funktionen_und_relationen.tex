@@ -1,5 +1,87 @@
 \section{Funktionen und Relationen (21-33)}
-  
 Definition der Funktion (insbesondere: Definitionsbereich, Wertebereich, Zuordnungsvorschrift, Graph). Definition von Bild und Urbild einer Menge zu einer gegebenen Funktion. Definition von Injektivität, Surjektivität, Bijektivität, Monotonie (wachsend, streng wachsend, fallend, streng fallend). Definition der Komposition von Abbildungen. Definition der Invertierbarkeit und der inversen Abbildung. Satz: Funktion ist invertierbar genau dann, wenn sie bijektiv ist. Satz: Strenge Monotonie impliziert Injektivität. Definition von oberer Schranke, unterer Schranke, Supremum, Infimum, Beschränktheit von Mengen. Definition der Familie. Definition der Folge. 
-Induktion, Rekursion, Kardinalität: 
-Beweisprinzip der vollständigen Induktion. Rekursive Definition. Summationssymbol. Produktsymbol. Formel für (endliche) geometrische Summen. Definition von endlich, unendlich, abzählbar. 
+\subsection{Definition der Funktion (insbesondere: Definitionsbereich, Wertebereich, Zuordnungsvorschrift, Graph).}
+Eine Funktion oder Abbildung $f$ ist eine Beziehung zwischen zweier Mengen $A$, $B$, welche jedes Element $x \in A$ einem Element $y \in B$ zuordnet. In diesem Fall schreibt man auch $f(x)$ für das Element $y$. Die Menge $A$ wird das der Definitionsbereich von $f$ gennant, auch geschrieben $\mathcal{D}(f)$, und die Menge $B$ der Wertebereich, geschrieben $\mathcal{R}(f)$.
+    
+Eine Funktion wird in folgender Weise notiert: $f : A \longrightarrow B$, $x \mapsto f(x)$ wobei $x \mapsto f(x)$ die Zuordnungsvorschrift genannt wird. 
+
+Die Menge der geordneten Paare $\{(x,y) \in A \times B : y = f(x)\}$ wird der Graph von $f$, $\text{graph}(f)$ genannt.
+
+\subsection{Definition von Bild und Urbild einer Menge zu einer gegebenen Funktion.}
+Seien $A$, $B$ Mengen und $f: A \longrightarrow B$ eine Funktion.
+
+\begin{itemize}
+\item Ist $T$ eine Teilmenge von $A$, dann ist $f(T) := \{f(x) \in B: x \in T \}$ das Bild von $T$ unter $f$.
+\item Ist $U$ eine Teilmenge von $B$, dann ist $f^{-1}(U):= \{x \in A: f(x) \in U \}$ das Urbild von $U$ unter $f$.
+\end{itemize}
+
+\subsection{Definition von Injektivität, Surjektivität, Bijektivität, Monotonie (wachsend, streng wachsend, fallend, streng fallend).}
+
+\subsubsection{Injektivität}
+Eine Funktion $f$ ist injektiv, wenn jedes $y \in B$ (maximal) genau ein Urbild besitzt, also wenn das Urbild von $\{y\}$ höchstens ein Element besitzt: (eine Definiton reicht)
+$$f \quad \text{injektiv} \quad \Leftrightarrow \quad \forall_{y \in B} (f^{-1}\{y\} = \emptyset \vee \exists! f(x) = y )$$
+$$f \quad \text{injektiv} \quad \Leftrightarrow \quad \forall_{x_1, x_2 \in A} (x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2))$$
+
+\subsubsection{Surjektivität}
+Eine Funktion $f$ ist surjektiv, wenn jedes Element des Wertebereichs (mindestens) ein Urbild besitzt: (eine Definiton reicht)
+$$f \quad \text{surjektiv} \quad \Leftrightarrow \quad \forall_{y \in B} \exists_{x \in A} \quad y = f(x)$$
+$$f \quad \text{surjektiv} \quad \Leftrightarrow \quad \forall_{y \in B} f^{-1} \{y\} \neq \emptyset$$
+
+\subsubsection{Bijektivität}
+Eine Funktion ist bijektiv, wenn sie sowohl injektiv als auch surjektiv ist.
+
+\subsubsection{Monotonie (wachsend, streng wachsend, fallend, streng fallend)}
+Sind $A$, $B$ nichtleere Mengen mit einer Partialordnung, hier beide als $\leq$ bezeichnet (auch wenn sie unterschiedlich sein können). Eine Funktion $f: A \longrightarrow B$ ist
+
+\begin{itemize}
+\item (strikt) isoton (steigend), wenn $$\forall_{x,y \in A} \quad (x < y \Rightarrow f(x) \leq f(y) \quad (bzw. f(x) < f(y)))$$
+\item (strikt) antiton (fallend), wenn $$\forall_{x,y \in A} \quad (x < y \Rightarrow f(x) \geq f(y) \quad (bzw. f(x) > f(y)))$$
+\end{itemize}
+
+Ist eine Funktion (strikt) isoton oder (strikt) antiton, dann ist sie (streng) monoton.
+
+\subsection{Definition der Komposition von Abbildungen.}
+Eine Komposition oder eine Verknüpfung zweier Funktionen $f$, $g$, wobei $f: A \longrightarrow B$, $g: C \longrightarrow D$ und $f(A) \subseteq C$ ist definiert als die Funktion $$g \circ f : A \longrightarrow D, \quad (g \circ f)(x) := g(f(x))$$ und wird “$g$ verknüpft mit $f$”, “$g$ komponiert mit $f$” oder “$g$ nach $f$” gelesen. Verknüpfungen sind nicht kommutativ.
+
+\subsection{Definition der Invertierbarkeit und der inversen Abbildung.}
+Gegeben eine nichtleere Menge $A$ ist die Funktion $\text{Id}_A: A \longrightarrow A$, wobei $\text{Id}_A (x):=x$, die identische Abbildung, oder die Identität. Eine Funktion $g: B \longrightarrow A$ wird das rechts-inverse (bzw. links-inverse) einer Funktion $f: A \longrightarrow B$ genannt, wenn $f \circ g = \text{Id}_B$ (bzw. $g \circ f = \text{Id}_A$). Ist $g$ ein Inverses von $f$, so schreibt man auch $f^{-1}$. Eine Funktion $f$ wird (rechts- bzw. links) invertierbar gennant, wenn ein solches (rechts- bzw. links) Inverses existiert.
+
+\subsection{Satz: Funktion ist invertierbar genau dann, wenn sie bijektiv ist.}
+Sind $A$, $B$ nichtleere Mengen, dann ist die Funktion
+\begin{itemize}
+\item $f: A \longrightarrow B$ rechts-invertierbar, wenn die Funktion injektiv ist.
+\item $f: A \longrightarrow B$ links-invertierbar, wenn die Funktion surjektiv ist.
+\item $f: A \longrightarrow B$ invertierbar, wenn die Funktion bijektiv ist.
+\end{itemize}
+
+\subsection{Satz: Strenge Monotonie impliziert Injektivität.}
+Seien $A$,$B$ nichtleere Mengen mit Partialordnungen, hier beide $\leq$, und ist die Ordnung auf $A$ eine Totalordnung, so gilt: Ist die Funktion $f: A \longrightarrow B$ strikt isoton oder strikt antiton, so ist $f$ injektiv.
+
+\subsection{Definition von oberer Schranke, unterer Schranke, Supremum, Infimum, Beschränktheit von Mengen.}
+Sei $\leq$ eine Partialordnung auf $A \neq \emptyset , \emptyset \neq B \subseteq A$.
+
+\subsubsection{obere (untere) Schranke}
+$x \in A$ lautet untere (bzw. obere) Schranke von $B$, wenn für alle $b \in B: x \leq b \quad \text{(bzw. }b \leq x \text{)}$. $B$ lautet nach unten (bzw. nach oben) beschränkt, wenn eine untere (bzw. obere) Schranke existiert.
+
+Es sei $M$ eine nichtleere Teilmenge von $\mathbb{R}, f:M\rightarrow\mathbb{R}, A \subseteq M, a\in M, B \subseteq\mathbb{R}$
+\begin{itemize}
+\item $f$ hat ein globales Maximum in $a$ genau dann wenn gilt $\forall_{x\in M}f(x)\leq f(a)$
+\item $f$ hat ein streng globales Maximum in $a$ genau dann wenn gilt $\forall_{x\in M}f(x)<f(a)$
+\end{itemize}
+
+$y \in B$ lautet das Minimum (bzw. das Maximum) von $B$, wenn $y$ eine untere bzw. eine obere Schranke von $B$ ist.
+
+\subsubsection{Supremum}
+Das Supremum der Menge $B$ ist das Minimum der Menge an oberer Schranken zur Menge $B$, geschrieben $\text{sup}B$.
+
+\subsubsection{Infimum}
+Das Infimum der Menge $B$ ist das Maximum der Menge an unterer Schranken zur Menge $B$, geschrieben $\text{inf}B$.
+
+\subsubsection{Beschränktheit von Mengen}
+Eine Menge ist \textit{beschränkt}, wenn sie sowohl nach unten als auch nach oben beschränkt ist.
+
+\subsection{Definition der Familie.}
+Gegeben einer Indexmenge $I$ und einer Menge $A$, wird eine Funktion $f: I \longrightarrow A$ eine Familie und wird als $(a_i)_{i \in I}$, wobei $a_i := f(i)$, notiert.
+
+\subsection{Definition der Folge.}
+Eine Folge in Menge $A$ ist eine Familie an Elementen aus $A$, bei der die Indexmenge die Menge der natürlichen Zahlen $\mathbb{N}$ ist. Notiert wird diese in der Form $(a_n)_{n \in \mathbb{N}}$ oder $(a_1, a_2,...)$. Eine Familie wird auch eine Folge genannt, wenn eine bijektive Funktion zwischen der Indexmenge $I$ und einer Teilmenge von $\mathbb{N}$ existiert.
