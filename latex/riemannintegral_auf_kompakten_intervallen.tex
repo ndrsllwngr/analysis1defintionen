@@ -90,41 +90,86 @@ $\text{ If } I \subseteq \mathbb { R } ,f : I \rightarrow \mathbb { K } ,\text{ 
 
 \subsection{Partielle Integration (154)}
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{154-theorem-10-22}.png}
-	\caption{154-theorem-10-22}
-	\label{154-theorem-10-22}
-\end{figure}
+Let $a ,b \in \mathbb { R } ,a < b ,I : = [ a ,b ]$. If $f ,g \in C ^ { 1} ( I ,\mathbb { C } )$, then the following integration by parts formula holds:
+\begin{equation}
+\int _ { a } ^ { b } f g ^ { \prime } = [ f g ] _ { a } ^ { b } - \int _ { a } ^ { b } f ^ { \prime } g
+\end{equation}
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{154-theorem-10-22}.png}
+%	\caption{154-theorem-10-22}
+%	\label{154-theorem-10-22}
+%\end{figure}
 
 \subsection{Substitutionsformel (154)}
+Let $I ,J \subseteq \mathbb { R }$ be intervals, $\phi \in C ^ { 1} ( I ) \text{ and } f \in C ( J ,\mathbb { C } )$. If $\phi ( I ) \subseteq J$, then the following change of variables formula holds for each $a ,b \in I$:
+\begin{equation}
+\int _ { \phi ( a ) } ^ { \phi ( b ) } f = \int _ { \phi ( a ) } ^ { \phi ( b ) } f ( x ) d x = \int _ { a } ^ { b } f ( \phi ( t ) ) \phi ^ { \prime } ( t ) d t = \int _ { a } ^ { b } ( f \circ \phi ) \phi ^ { \prime }
+\end{equation}
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{154-theorem-10-24}.png}
-	\caption{154-theorem-10-24}
-	\label{154-theorem-10-24}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{154-theorem-10-24}.png}
+%	\caption{154-theorem-10-24}
+%	\label{154-theorem-10-24}
+%\end{figure}
 
 \subsection{Aufgaben vom Typ wie in den Beispielen 10.21, 10.23 und 10.25}
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{153-example-10-21}.png}
-	\caption{153-example-10-21}
-	\label{153-example-10-21}
-\end{figure}
+\begin{itemize}
+\item \textbf{Example 10.21} Due to the fundamental theorem, if we know a function's antiderivative,
+we can easily compute its integral over a given interval. Here are three simple
+examples:
+\begin{equation}
+ \int _ { 0} ^ { 1} \left( x ^ { 5} - 3x \right) \text{d} x = \left[ \frac { x ^ { 6} } { 6} - \frac { 3x ^ { 2} } { 2} \right] _ { 0} ^ { 1} = \frac { 1} { 6} - \frac { 3} { 2} = - \frac { 4} { 3}
+ \end{equation} 
+ \begin{equation}
+\int _ { 1} ^ { e } \frac { 1} { x } \text{d} x = [ \ln x ] _ { 1} ^ { e } = \ln e - \ln 1= 1
+ \end{equation} 
+ \begin{equation}
+\int _ { 0} ^ { \pi } \sin x \text{d} x = [ - \cos x ] _ { 0} ^ { \pi } = 2
+ \end{equation} 
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{154-example-10-23}.png}
-	\caption{154-example-10-23}
-	\label{154-example-10-23}
-\end{figure}
+\item \textbf{Example 10.23} We compute the integral $\int _ { 0} ^ { 2\pi } \sin ^ { 2} t \text{d}t$:
+\begin{equation}
+\int _ { 0} ^ { 2\pi } \sin ^ { 2} t \text{d} t = [ - \sin t \cos t ] _ { 0} ^ { 2\pi } + \int _ { 0} ^ { 2\pi } \cos ^ { 2} t \text{d} t = \int _ { 0} ^ { 2\pi } \cos ^ { 2} t \text{d} t
+\end{equation}
+Adding$\int _ { 0} ^ { 2\pi } \sin ^ { 2} t \text{d} t$ on both sides and using $\sin ^ { 2} + \cos ^ { 2} \equiv 1$ yields
+\begin{equation}
+2\int _ { 0} ^ { 2\pi } \sin ^ { 2} t \text{d} t = \int _ { 0} ^ { 2\pi } 1 \text{d} t = 2\pi
+\end{equation}
+i.e. $\int _ { 0} ^ { 2\pi } \sin ^ { 2} t d t = \pi$.
+ 
+ 
+\item \textbf{Example 10.25}  
+We compute the integral $\int _ { 0} ^ { 1} t ^ { 2} \sqrt { 1- t } \text{d} t$ using the change of variables $x : = \phi ( t ) : = 1- t ,\phi ^ { \prime } ( t ) = - 1$:
+\begin{equation}
+\begin{split}
+\int _ { 0} ^ { 1} t ^ { 2} \sqrt { 1- t } \text{d} t &= - \int _ { 1} ^ { 0} ( 1- x ) ^ { 2} \sqrt { x } \text{d} x = \int _ { 0} ^ { 1} \left( \sqrt { x } - 2x \sqrt { x } + x ^ { 2} \sqrt { x } \right) \text{d} x \\
+ &= \left[ \frac { 2x ^ { \frac { 3} { 2} } } { 3} - \frac { 4x ^ { \frac { 5} { 2} } } { 5} + \frac { 2x ^ { \frac { 7} { 2} } } { 7} \right] _ { 0} ^ { 1} = \frac { 16} { 105}
+\end{split}
+\end{equation}
 
-\begin{figure}[H]
-	\centering
-  \includegraphics[width=0.7\textwidth]{../img/{155-example-10-25}.png}
-	\caption{155-example-10-25}
-	\label{155-example-10-25}
-\end{figure}
+\end{itemize}
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{153-example-10-21}.png}
+%	\caption{153-example-10-21}
+%	\label{153-example-10-21}
+%\end{figure}
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{154-example-10-23}.png}
+%	\caption{154-example-10-23}
+%	\label{154-example-10-23}
+%\end{figure}
+
+%\begin{figure}[H]
+%	\centering
+%  \includegraphics[width=0.7\textwidth]{../img/{155-example-10-25}.png}
+%	\caption{155-example-10-25}
+%	\label{155-example-10-25}
+%\end{figure}
