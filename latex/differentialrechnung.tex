@@ -1,3 +1,68 @@
-\section{Differentialrechnung}
+\section{Differentialrechnung (127-139)}
  
 Definition der Differenzierbarkeit und Ableitung für reell- und für komplexwertige Funktionen. Satz: Eine komplexwertige Funktion ist genau dann differenzierbar, wenn ihr Realteil und ihr Imaginärteil differenzierbar sind. Satz: Differenzierbarkeit impliziert Stetigkeit. Ableitungsregeln: Ableiten ist linear, Produktregel, Quotientenregel, Kettenregel. Ableitungen von Polynomen, von der reellen Exponentialfunktion, vom natürlichen Logarithmus, vom reellen Sinus und vom reellen Kosinus. Ableitung von Potenzfunktionen mit reellen Exponenten. Definition von Ableitungen höherer Ordnung. Satz: Ist eine Funktion in einem lokalen Extremum differenzierbar, so verschwindet dort die Ableitung, Satz über den Zusammenhang des Vorzeichens der Ableitung mit der Monotonie einer differenzierbaren Funktion. Hinreichende Bedingungen für die Existenz von Maxima und Minima bei differenzierbaren Funktionen. 
+
+
+\subsection{Differenzierbarkeit und Ableitung für reell- und für komplexwertige Funktionen (127)}
+Let $a < b ,f : ] a ,b [ \rightarrow \mathbb { K } ( a = - \infty ,b = \infty$ is admissible), and $\xi \in ] a ,b [$.
+Then $f$ is said to be \textit{differentiable} at $\xi$ if, and only if, the following limit exists.
+The limit is then called the \textit{derivative} of $f$ in $\xi$.
+\begin{equation}
+f ^ { \prime } ( \xi ) : = \partial _ { x } f ( \xi ) : = \frac { d f ( \xi ) } { d x } : = \lim _ { x \rightarrow \xi } \frac { f ( x ) - f ( \xi ) } { x - \xi } = \lim _ { h \rightarrow 0} \frac { f ( \xi + h ) - f ( \xi ) } { h }
+\end{equation}
+
+$f$ is called \textit{differentiable} if, and only if, it is differentiable at each $\xi \in [ a ,b ]$. In that case, one calls the function
+\begin{equation}
+f ^ { \prime } : ] a ,b [ \rightarrow \mathbb { K } ,\quad x \mapsto f ^ { \prime } ( x )
+\end{equation}
+the \textit{derivative} of $f$.
+\newline
+\begin{leftbar}
+Ansatz: Sei $(h_k)_{k \in \mathbb{k}}$ beliebige Nullfolge mit $h_k \neq 0$ $\forall k \in \mathbb{N}$
+
+Schreibe: $\lim\limits_{h \rightarrow 0} \frac{f(x_0+h)-f(x_0)}{h} = \lim\limits_{n \rightarrow \infty} \frac{f(x_0+h_k)-f(x_0)}{h_k}$. Setze ein. Forme um, bis Limes bestimmbar
+\end{leftbar}
+
+\subsection{Satz: Eine komplexwertige Funktion ist genau dann differenzierbar, wenn ihr Realteil und ihr Imaginärteil differenzierbar sind (127f)}
+\begin{equation}
+f ^ { \prime } ( \xi ) = ( \operatorname{Re} f ) ^ { \prime } ( \xi ) + i ( \operatorname{Im} f ) ^ { \prime } ( \xi )
+\end{equation}
+
+\subsection{Satz: Differenzierbarkeit impliziert Stetigkeit (128)}
+If $f : ] a ,b [ \rightarrow \mathbb { K }$ as is differentiable at $\xi \in [ a ,b ]$ then it is
+continuous at $\xi$. In particular, if $f$ is everywhere differentiable, then it is everywhere continuous. 
+ 
+\subsection{Ableitungsregeln (129, 132)}
+Let $a < b ,f,g : ] a ,b [ \rightarrow \mathbb { K } ( a = - \infty ,b = \infty$ is admissible), and $\xi \in ] a ,b [$. Assume $f$ and $g$ are differentiable at $\xi$.
+\subsubsection{Ableiten ist linear (129)}
+For each $\lambda \in \mathbb { K } ,\lambda f$ is differentiable at $\xi$ and $( \lambda f ) ^ { \prime } ( \xi ) = \lambda f ^ { \prime } ( \xi )$.
+
+$f + g$ is differentiable at $\xi$ and $( f + g ) ^ { \prime } ( \xi ) = f ^ { \prime } ( \xi ) + g ^ { \prime } ( \xi )$.
+\subsubsection{Produktregel (129)}
+$fg$ is differentiable at $\xi$ and $( f g ) ^ { \prime } ( \xi ) = f ^ { \prime } ( \xi ) g ( \xi ) + f ( \xi ) g ^ { \prime } ( \xi )$.
+\subsubsection{Quotientenregel (129)}
+If $g ( \xi ) \neq 0$, then $f/g$ is differentiable at $\xi$ and 
+$( f / g ) ^ { \prime } ( \xi ) = \frac { f ^ { \prime } ( \xi ) g ( \xi ) - f ( \xi ) g ^ { \prime } ( \xi ) } { ( g ( \xi ) ) ^ { 2} }$, in particular $( 1/ g ) ^ { \prime } ( \xi ) = - \frac { g ^ { \prime } ( \xi ) } { ( g ( \xi ) ) ^ { 2} }$.
+\subsubsection{Kettenregel (132)}
+Let $a < b$, $c < d$, $f : ] a ,b [ \rightarrow \mathbb { R }$, $g : ] c ,d [ \rightarrow \mathbb { R }$, $f ( ] a ,b [ ) \subseteq ] c ,d [ ( a ,c = - \infty ; b ,d = \infty$ is admissible). If $f$ is differentiable in $\xi \in [ a ,b ]$ and $g$ is differentiable in $f(\xi) \in ] c ,d [$, then $g \circ f : ] a ,b [ \rightarrow \mathbb { K }$ is differentiable in $\xi$ and
+\begin{equation}
+( g \circ f ) ^ { \prime } ( \xi ) = f ^ { \prime } ( \xi ) g ^ { \prime } ( f ( \xi ) ).
+\end{equation}
+
+\subsection{Ableitungen von Polynomen (130), von der reellen Exponentialfunktion (131, 133), vom natürlichen Logarithmus (131), vom reellen Sinus (133) und vom reellen Kosinus}
+\TODO{!!!}
+
+\subsection{Ableitung von Potenzfunktionen mit reellen Exponenten}
+\TODO{!!!}
+
+\subsection{Ableitungen höherer Ordnung} 
+\TODO{!!!}
+
+\subsection{Satz: Ist eine Funktion in einem lokalen Extremum differenzierbar, so verschwindet dort die Ableitung}
+\TODO{!!!}
+
+\subsection{Satz über den Zusammenhang des Vorzeichens der Ableitung mit der Monotonie einer differenzierbaren Funktion}
+\TODO{!!!}
+
+\subsection{Hinreichende Bedingungen für die Existenz von Maxima und Minima bei differenzierbaren Funktionen.}
+\TODO{!!!}
