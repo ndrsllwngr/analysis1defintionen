@@ -3,10 +3,56 @@
 Die punktweise definierte Arithmetik reell- und komplexwertiger Funktionen. Monome und Polynome. Grad von Polynomen. 
 
 \subsection{Punktweise definierte Arithmetik reell- und komplexwertiger Funktionen (63)}
-\TODO{Notation 6.1, 6.2}
+We will write $\mathbb { K }$ in situations, where we allow $\mathbb { K }$ to be $\mathbb { R }$ or $\mathbb { C }$.
 
-\subsection{Monome und Polynome}
-\TODO{Defintion 6.3}
+If $A$ is any nonempty set, then one can add and multiply arbitrary
+functions $f ,g : A \rightarrow \mathbb { K }$, and one can define several further operations to create new functions from $f$ and $g$:
+\begin{align}
+( f + g ) &: A \rightarrow \mathbb { K } , &  ( f + g ) ( x ) &: = f ( x ) + g ( x ), \\
+( \lambda f ) &: A \rightarrow \mathbb { K } , &  ( \lambda f ) ( x ) &: = \lambda f ( x ) \quad \text{ for each } \lambda \in \mathbb { K },\\
+( f g ) &: A \rightarrow \mathbb { K } , &  ( f g ) ( x ) &: = f ( x ) g ( x ),\\
+( f / g ) &: A \rightarrow \mathbb { K } , &  ( f / g ) ( x ) &: = f ( x ) / g ( x ) \quad ( \text{ assuming } g ( x ) \neq 0),\\
+\operatorname{Re} f &: A \rightarrow \mathbb { R } , &  ( \operatorname{Re} f ) ( x ) &: = \operatorname{Re} ( f ( x ) ),\\
+\operatorname{Im} f &: A \rightarrow \mathbb { R } , &  ( \operatorname{Im} f ) ( x ) &: = \operatorname{Im} ( f ( x ) ).\\
+\intertext{For $\mathbb { K } = \mathbb{R}$, we further define}
+\max ( f ,g ) &: A \rightarrow \mathbb { R } , & \max ( f ,g ) ( x ) &: = \max \{ f ( x ) ,g ( x ) \}, \\
+\min ( f ,g ) &: A \rightarrow \mathbb { R } , & \min ( f ,g ) ( x ) &: = \min \{ f ( x ) ,g ( x ) \},\\
+f ^ { + } &: A \rightarrow \mathbb { R } , & f ^ { + } &: = \max ( f ,0),\\
+f ^ { - } &: A \rightarrow \mathbb { R } , & f ^ { - } &: = \max ( - f ,0).\\
+\intertext{Finally, once again also allowing $\mathbb{K}=\mathbb{C}$,}
+| f | &: A \rightarrow \mathbb { R } , & | f | ( x ) &: = | f ( x ) |.\\
+\intertext{One calls $f ^ { + }$ and $f ^ { - }$ the \textit{positive part} and the \textit{negative part} of $f$, respectively. For $\mathbb{R}$-valued functions $f$, we have}
+&& | f | &= f ^ { + } + f ^ { - }.
+\end{align}
 
-\subsection{Grad von Polynomen}
-\TODO{Theorem 6.6}
+\subsection{Monome und Polynome (64)}
+Let $n \in \mathbb{N}$. Each function from $\mathbb{K}$ into $\mathbb{K}$, $x \mapsto x ^ { n }$, is called a \textit{monomial}.
+
+A function $P$ from $\mathbb{K}$ into $\mathbb{K}$ is called a \textit{polynomial} if, and only if, it is a linear combination of monomials, i.e. if, and only if $P$ has the form
+\begin{equation}
+P : \mathbb { K } \rightarrow \mathbb { K } ,\quad P ( x ) = \sum _ { j = 0} ^ { n } a _ { j } x ^ { j } = a _ { 0} + a _ { 1} x + \cdots + a _ { n } x ^ { n } ,\quad a _ { j } \in \mathbb { K }.
+\end{equation}
+The $a_j$ are called the \textit{coefficients} of $P$. The largest number $d \leq n$ such that $a_d \neq 0$ is called the degree of $P$, denoted deg($P$). If all coefficients are $0$, then $P$ is called the \textit{zero polynomial}; the degree of the zero polynomial is defined as $-1$ (in Th. 6.6(b) below, we
+will see that each polynomial of degree $n \in \mathbb { N } _ { 0}$ is uniquely determined by its coefficients
+$a_0, . . . , a_n$ and vice versa).
+
+Polynomials of degree $\leq 0$ are \textit{constant}. Polynomials of degree $\leq 1$ have the form $P(x) = a+bx$ and are called affine functions (often they are also called linear functions, even though this is not really correct for $a \neq 0$, since every function $P$ that is linear (in the sense of linear algebra) must satisfy $P(0) = 0$). Polynomials of degree $\leq 2$ have the
+form $P(x) = a + bx + cx^2$ and are called \textit{quadratic} functions.
+
+Each $\xi \in \mathbb { K }$ such that $P(\xi) = 0$ is called a zero or a root of $P$.
+
+A rational function is a quotient $P/Q$ of two polynomials $P$ and $Q$.
+
+\subsection{Grad von Polynomen (66)}
+\begin{enumerate}
+\item If $P$ is a polynomial with $n :=deg(P) \geq 0$, then $P$ has at most $n$
+zeros.
+\item Let $P$,$Q$ be polynomials as in (6.3) with $n = m$, $deg(P) \leq n$, and $deg(Q) \leq n$. If
+$P(x_j) = Q(x_j)$ at $n + 1$ distinct points $x_0, x_1, . . . , x_n x _ { n } \in \mathbb { K }$, then $a_j = b_j$ for each
+$j \in {0, . . . , n}$.
+
+Consequence 1: If $P$,$Q$ with degree $\leq n$ agree at $n+1$ distinct points, then $P = Q$.
+
+Consequence 2: If we know $P = Q$, then they agree everywhere, in particular at
+$max{deg(P), deg(Q)} + 1$ distinct points, which implies they have the same coefficients.
+\end{enumerate}
