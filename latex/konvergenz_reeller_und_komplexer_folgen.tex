@@ -3,20 +3,31 @@
 Definition und Veranschaulichung der Epsilon-Umgebung sowie der Umgebung einer reellen Zahl sowie einer komplexen Zahl. Definition der Beschränktheit reeller und komplexer Folgen. Definition von Konvergenz und Grenzwert/Limes reeller und komplexer Folgen. Definition von Divergenz reeller und komplexer Folgen. Satz: Konvergente Folgen sind beschränkt. Nullfolgen sind solche, die gegen Null konvergieren. Satz: Eine durch eine Nullfolge beschränkte Folge ist selbst eine Nullfolge. Satz: Das Produkt aus einer Nullfolge und einer beschränkten Folge ist eine Nullfolge. Die Grenzwertsätze aus Th. 7.13 wissen und zur Bestimmung von Grenzwerten anwenden können. Einschachtelungssatz. Definition der bestimmten Divergenz gegen plus oder minus Unendlich. Eine monoton steigende Folge konvergiert oder divergiert bestimmt gegen plus Unendlich; eine monoton fallende Folge konvergiert oder divergiert bestimmt gegen minus Unendlich. Definition von Teilfolge und Umordnung einer Folge. Satz: Jede Teilfolge und jede Umordnung einer konvergenten Folge ist konvergent mit dem selben Limes. 
 
 
-\subsection{Definition und Veranschaulichung der Epsilon-Umgebung sowie der Umgebung einer reellen Zahl sowie einer komplexen Zahl}
-Die Menge $A \subset \mathbb{K}$ ist eine Umgebung von $x \Leftrightarrow$ 
-$\exists \epsilon > 0 : B_{\epsilon}(x) = \{x' \in \mathbb{K} : |x'-x| < \epsilon\}$
+\subsection{Definition und Veranschaulichung der Epsilon-Umgebung sowie der Umgebung einer reellen Zahl sowie einer komplexen Zahl (69)}
+
+Given $z \in \mathbb { K }$ and $\epsilon \in \mathbb { R } ^ { + }$, we call the set $B _ { \epsilon } ( z ) : = \{ w \in \mathbb { K } : | w - z | < \epsilon \}$ the $\epsilon$-neighborhood of $z$ or, in anticipation of Calculus II, the (open) $\epsilon$-ball
+with center $z$ (in fact, for $\mathbb { K } = \mathbb { C } ,B _ { \epsilon } ( z )$ represents an open disk in the complex
+plane with center $z$ and radius $\epsilon$, whereas, for $\mathbb { K } = \mathbb { R } ,B _ { \epsilon } ( z ) = ] z - \epsilon ,z + \epsilon [$ is the
+open interval with center $z$ and length $2\epsilon$). More generally, a set $U \subseteq \mathbb { K }$ is called
+a neighborhood of $z$ if, and only if, there exists $\epsilon > 0$ with $B _ { \epsilon } ( z ) \subseteq U$ (so, for
+example, for $\epsilon > 0$, $B _ { \epsilon } ( z )$ is always a neighborhood of $z$, whereas $\mathbb { R }$ and $[ z - \epsilon ,\infty [$
+are neighborhoods of $z$ for $\mathbb { K } = \mathbb { R }$, but not for $\mathbb { K } = \mathbb { C }$ ($[ z - \epsilon ,\infty [$ not even being
+defined for $z \notin \mathbb { R }$); the sets $\{z\}$, $\{ w \in \mathbb { K } : \operatorname{Re} w \geq \operatorname{Re} z \}$, $\{ w \in \mathbb { K } : \operatorname{Re} w \geq \operatorname{Re} z + \epsilon \}$ are never neighborhoods of $z$). \newline
+
+\begin{leftbar}
+Die Menge $A \subset \mathbb{K}$ ist eine Umgebung von $z$
+
+$\Leftrightarrow \exists \epsilon \in \mathbb { R } ^ { + } : B_{\epsilon}(z) = \{w \in \mathbb{K} : |w-z| < \epsilon\}$
 $B_{\epsilon} \subset A$
 
-“Die Menge aller $x'$ die weniger als $\epsilon$ von $x$ entfernt sind.”
-
-\TODO{TODO}
+“Die Menge aller $w$ die weniger als $\epsilon$ von $x$ entfernt sind.”
+\end{leftbar}
 
 \subsection{Definition der Beschränktheit reeller und komplexer Folgen (69)}
 The sequence $(z _ { n }) _ { n \in \mathbb { N } }$  in $\mathbb{K}$ is called bounded if, and only if, the set
 $\left\{ | z _ { n } | : n \in \mathbb { N } \right\}$ is bounded in the sense of Def. 2.26(a).
 
-\subsection{Definition von Konvergenz und Grenzwert/Limes reeller und komplexer Folgen}
+\subsection{Definition von Konvergenz und Grenzwert/Limes reeller und komplexer Folgen (67f)}
 
 Die reelle Zahl $z$ heißt \textit{Grenzwert} oder \textit{Limes} der Zahlenfolge $\left\langle z _ { n } \right\rangle$, wenn es zu jedem $\epsilon > 0$ eine positive Zahl $N$
  gibt, so dass für alle $n > N$ stets $| z _ { n } - z | < \epsilon$ ist.
@@ -39,13 +50,19 @@ $\underset{\epsilon \in \mathbb{R^+}}{\forall} \ \underset{N \in \mathbb{N}}{\ex
  \end{itemize} 
  \end{leftbar}
  
- \TODO{68 Komplexe Zahl Konvergenz}
- 
- \TODO{69-Def.7.7 (Neighborhood)}
+Let $(z _ { n }) _ { n \in \mathbb { N } }$ be a sequence in $\mathbb{C}$. Then $(z _ { n }) _ { n \in \mathbb { N } }$ is convergent in $\mathbb{C}$
+if, and only if, both $(\operatorname{Re}z _ { n }) _ { n \in \mathbb { N } }$ and $(\operatorname{Im}z _ { n }) _ { n \in \mathbb { N } }$ are convergent in $\mathbb{R}$. Moreover, in
+that case,
+\begin{equation}
+\lim _ { n \rightarrow \infty } z _ { n } = z \quad \Leftrightarrow \quad \lim _ { n \rightarrow \infty } \operatorname{Re} z _ { n } = \operatorname{Re} z \quad \wedge \quad \lim  _ { n \rightarrow \infty } \operatorname{Im} z _ { n } = \operatorname{Im} z
+\end{equation}
+Let $(z _ { n }) _ { n \in \mathbb { N } }$ be a sequence in $\mathbb{R}$ and $z \in \mathbb{C}$. Then
+\begin{equation}
+\lim _ { n \rightarrow \infty } x _ { n } = z \quad \Rightarrow \quad z \in \mathbb { R }
+\end{equation}
 
-
-\subsection{Definition von Divergenz reeller und komplexer Folgen}
-\TODO{TODO}
+\subsection{Definition von Divergenz reeller und komplexer Folgen (67)}
+The sequence $(z _ { n }) _ { n \in \mathbb { N } }$ in $\mathbb{K}$ is called divergent if, and only if, it is not convergent.
 
 \subsection{Satz: Konvergente Folgen sind beschränkt (69)}
 Let $(z _ { n }) _ { n \in \mathbb { N } }$ be a sequence in $\mathbb{K}$. If  $(z _ { n }) _ { n \in \mathbb { N } }$  is convergent, then it is bounded.
