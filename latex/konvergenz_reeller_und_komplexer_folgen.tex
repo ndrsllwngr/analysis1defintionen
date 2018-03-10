@@ -1,3 +1,125 @@
-\section{Konvergenz reeller und komplexer Folgen}
+\section{Konvergenz reeller und komplexer Folgen (67-105)}
  
 Definition und Veranschaulichung der Epsilon-Umgebung sowie der Umgebung einer reellen Zahl sowie einer komplexen Zahl. Definition der Beschränktheit reeller und komplexer Folgen. Definition von Konvergenz und Grenzwert/Limes reeller und komplexer Folgen. Definition von Divergenz reeller und komplexer Folgen. Satz: Konvergente Folgen sind beschränkt. Nullfolgen sind solche, die gegen Null konvergieren. Satz: Eine durch eine Nullfolge beschränkte Folge ist selbst eine Nullfolge. Satz: Das Produkt aus einer Nullfolge und einer beschränkten Folge ist eine Nullfolge. Die Grenzwertsätze aus Th. 7.13 wissen und zur Bestimmung von Grenzwerten anwenden können. Einschachtelungssatz. Definition der bestimmten Divergenz gegen plus oder minus Unendlich. Eine monoton steigende Folge konvergiert oder divergiert bestimmt gegen plus Unendlich; eine monoton fallende Folge konvergiert oder divergiert bestimmt gegen minus Unendlich. Definition von Teilfolge und Umordnung einer Folge. Satz: Jede Teilfolge und jede Umordnung einer konvergenten Folge ist konvergent mit dem selben Limes. 
+
+
+\subsection{Definition und Veranschaulichung der Epsilon-Umgebung sowie der Umgebung einer reellen Zahl sowie einer komplexen Zahl}
+Die Menge $A \subset \mathbb{K}$ ist eine Umgebung von $x \Leftrightarrow$ 
+$\exists \epsilon > 0 : B_{\epsilon}(x) = \{x' \in \mathbb{K} : |x'-x| < \epsilon\}$
+$B_{\epsilon} \subset A$
+
+“Die Menge aller $x'$ die weniger als $\epsilon$ von $x$ entfernt sind.”
+
+\TODO{TODO}
+
+\subsection{Definition der Beschränktheit reeller und komplexer Folgen (69)}
+The sequence $(z _ { n }) _ { n \in \mathbb { N } }$  in $\mathbb{K}$ is called bounded if, and only if, the set
+$\left\{ | z _ { n } | : n \in \mathbb { N } \right\}$ is bounded in the sense of Def. 2.26(a).
+
+\subsection{Definition von Konvergenz und Grenzwert/Limes reeller und komplexer Folgen}
+
+Die reelle Zahl $z$ heißt \textit{Grenzwert} oder \textit{Limes} der Zahlenfolge $\left\langle z _ { n } \right\rangle$, wenn es zu jedem $\epsilon > 0$ eine positive Zahl $N$
+ gibt, so dass für alle $n > N$ stets $| z _ { n } - z | < \epsilon$ ist.
+ 
+ Eine Folge $\left\langle z _ { n } \right\rangle$ heißt \textit{konvergent}, wenn sie einen \textit{Grenzwert} $z$ besitzt $\Leftrightarrow \lim\limits_ { n \rightarrow \infty } z _ { n } = z$.
+ 
+\textbf{Kurz gefasst:} Sei $(z_n)_{n \in \mathbb{N}}$ Folge.\\
+$z_n$ ist konvergent $\Leftrightarrow$ 
+$\lim\limits_{n \rightarrow \infty}{z_n} = z \Leftrightarrow$ 
+$\underset{\epsilon \in \mathbb{R^+}}{\forall} \ \underset{N \in \mathbb{N}}{\exists} \ \underset{n > N}{\forall} \  |z_n - z| < \epsilon$
+\newline
+\begin{leftbar}
+ Beispiel:
+\begin{itemize}
+ \item Es sei $z_n = \frac{1}{n}$ unsere Folge.
+ \item Berechne Grenzwert: $\lim\limits_{n \rightarrow \infty}{z_n} = 0$
+ \item Schreibe: Sei $e \in \mathbb{R^+}$, wähle $N = ?$, sei $n > N$
+ \item Setze $a_n$ und $a$ ein: $|z_n - 0| = |\frac{1}{n} -0| = {|\frac{1}{n}| < \frac{1}{N}} = \epsilon$
+ \item $\Rightarrow N = \frac{1}{\epsilon}$
+ \end{itemize} 
+ \end{leftbar}
+ 
+ \TODO{68 Komplexe Zahl Konvergenz}
+ 
+ \TODO{69-Def.7.7 (Neighborhood)}
+
+
+\subsection{Definition von Divergenz reeller und komplexer Folgen}
+\TODO{TODO}
+
+\subsection{Satz: Konvergente Folgen sind beschränkt (69)}
+Let $(z _ { n }) _ { n \in \mathbb { N } }$ be a sequence in $\mathbb{K}$. If  $(z _ { n }) _ { n \in \mathbb { N } }$  is convergent, then it is bounded.
+
+\subsection{Nullfolgen sind solche, die gegen Null konvergieren (70)}
+Let $(z _ { n }) _ { n \in \mathbb { N } }$ be a sequence in $\mathbb{C}$ with $\lim _ { n \rightarrow \infty } z _ { n } = 0$.
+
+\subsubsection{Satz: Eine durch eine Nullfolge beschränkte Folge ist selbst eine Nullfolge (70)}
+If $(b _ { n }) _ { n \in \mathbb { N } }$ is a sequences in $\mathbb{C}$ such that there exists $C \in \mathbb { R } ^ { + }$ with $| b _ { n } | \leq C | z _ { n } |$ for
+almost all $n$, then $\lim _ { n \rightarrow \infty } b _ { n } = 0$.
+
+\subsubsection{Satz: Das Produkt aus einer Nullfolge und einer beschränkten Folge ist eine Nullfolge (70)}
+If $(c _ { n }) _ { n \in \mathbb { N } }$ is a bounded sequence in $\mathbb{C}$, then $\lim _ { n \rightarrow \infty } (c_n z_n) = 0$.
+
+\subsection{Die Grenzwertsätze aus Th. 7.13 wissen und zur Bestimmung von Grenzwerten anwenden können (70f)}
+\textit{Siehe Skript} \newline
+\begin{leftbar}
+Seite 70-71
+\end{leftbar}
+
+\subsection{Einschachtelungssatz (Sandwich Theorem) (72)}
+Let $(x _ { n }) _ { n \in \mathbb { N } }$, $(y _ { n }) _ { n \in \mathbb { N } }$, and $(a _ { n }) _ { n \in \mathbb { N } }$ be sequences in $\mathbb{R}$. If $x _ { n } \leq a _ { n } \leq y _ { n }$ holds for almost all $n \in \mathbb { N }$, then
+\begin{equation}
+\lim _ { n \rightarrow \infty } x _ { n } = \lim _ { n \rightarrow \infty } y _ { n } = x \in \mathbb { R } \quad \Rightarrow \quad \lim _ { n \rightarrow \infty } a _ { n } = x
+\end{equation} \newline
+\begin{leftbar}
+Sei $(x_n)_{x \in \mathbb{N}}, (y_n)_{y \in \mathbb{N}}$ Folgen. Wenn $x_n \leq a_n \leq y_n$ für fast alle $n$.
+
+Dann $\lim\limits_{n \rightarrow \infty}{x_n} = \lim\limits_{n \rightarrow \infty}{y_n} = x \in \mathbb{R} \Rightarrow$
+$\lim\limits_{n \rightarrow \infty}{a_n} = x$
+\end{leftbar}
+
+\subsection{Definition der bestimmten Divergenz gegen plus oder minus Unendlich (72)}
+Let $(x _ { n }) _ { n \in \mathbb { N } }$ be a sequence in $\mathbb{R}$. The sequence is said to diverge to
+$\infty$ (resp. to $-\infty$), denoted $\lim _ { n \rightarrow \infty } x _ { n } = \infty$ (resp. $\lim _ { n \rightarrow \infty } x _ { n } = -\infty$) if, and only if, for
+each $K \in \mathbb { R }$, almost all $x_n$ are bigger (resp. smaller) than $K$. Thus,
+\begin{align}
+\lim _ { n \rightarrow \infty } x _ { n } = \infty \quad & \Leftrightarrow \underset{K \in \mathbb{R}}{\forall} \ \underset{N \in \mathbb{N}}{\exists} \ \underset{n > N}{\forall}  \ x _ { n } > K \\
+\lim _ { n \rightarrow \infty } x _ { n } = -\infty \quad & \Leftrightarrow \underset{K \in \mathbb{R}}{\forall} \ \underset{N \in \mathbb{N}}{\exists} \ \underset{n > N}{\forall}  \ x _ { n } < K
+\end{align}
+
+\subsection{Eine monoton steigende Folge konvergiert oder divergiert bestimmt gegen plus Unendlich; eine monoton fallende Folge konvergiert oder divergiert bestimmt gegen minus Unendlich (73)}
+Suppose $S := (x_n)_{n \in \mathbb{N}}$ is a monotone sequence in $\mathbb{R}$ (increasing or decreasing). Defining $A := \{x_n : n \in \mathbb{N}\}$, the following holds:
+\begin{equation}
+\lim\limits_{n\rightarrow \infty}x_n =
+\begin{cases}
+\text{sup}A & \text{if $S$ is increasing and bounded,} \\
+\infty & \text{if $S$ is increasing and not bounded,} \\
+\text{inf}A & \text{if $S$ is decreasing and bounded,} \\
+-\infty & \text{if $S$ is decreasing and not bounded.}
+\end{cases}
+\end{equation}
+
+\subsection{Definition von Teilfolge und Umordnung einer Folge (73)}
+Let $A$ be an arbitrary nonempty set. Consider a sequence $\sigma : \mathbb { N } \rightarrow A$. Given a function $\phi : \mathbb { N } \rightarrow \mathbb { N }$ (that means $( \phi ( n ) ) _ { n \in \mathbb { N } }$ constitutes a sequence of
+indices), the new sequence $( \sigma \circ \phi ) : \mathbb { N } \rightarrow A$ is called a subsequence of $\sigma$ if, and
+only if, $\phi$ is strictly increasing (i.e. $1\leq \phi ( 1) < \phi ( 2) < \dots$ ). Moreover, $ \sigma \circ \phi$ is
+called a reordering of $\sigma$ if, and only if, $\phi$ is bijective. One can write $\sigma$ in the form
+$(z_{ n }) _ { n \in \mathbb { N } }$ by setting $z _ { n } : = \sigma ( n )$, and one can write $ \sigma \circ \phi$  in the form $\left( w _ { n } \right) n \in \mathbb { N }$ by setting
+$w _ { n } : = ( \sigma \circ \phi ) ( n ) = z _ { \phi ( n ) }$. Especially for a subsequence of $(z_{ n }) _ { n \in \mathbb { N } }$, it is also common
+to write $\left( z _ { n _ { k } } \right) _ { k \in \mathbb { N } }$. This notation corresponds to the one above if one lets $n _ { k } : = \phi ( k )$.
+Analogous definitions work if the index set $\mathbb{N}$ of $\sigma$ is replaced by a general countable nonempty index set $I$. \newline
+\begin{leftbar}
+\textbf{Example:} Consider the sequence $(1, 2, 3, \dots )$. Then $(2, 4, 6, \dots )$ constitutes a subsequence and $(2, 1, 4, 3, 6, 5, \dots )$ constitutes a reordering. Using the notation of Def. 7.21, the original sequence is given by $\sigma : \mathbb { N } \rightarrow \mathbb { N }$, $\sigma ( n ) : = n$; the subsequence
+is selected via $\phi _ { 1} : \mathbb { N } \rightarrow \mathbb { N }$, $\phi _ { 1} ( n ) : = 2n$; and the reordering is accomplished via
+\begin{equation}
+\phi _ { 2} : \mathbb { N } \rightarrow \mathbb { N } ,\phi _ { 2} ( n ) : =
+\begin{cases}
+n + 1 & \text{if $n$ is odd,} \\
+n - 1 & \text{if $n$ is even.}
+\end{cases}
+\end{equation}
+\end{leftbar}
+
+\subsection{Satz: Jede Teilfolge und jede Umordnung einer konvergenten Folge ist konvergent mit dem selben Limes (73)}
+Let $\left( z _ { n } \right) n \in \mathbb { N }$ be a sequence in $\mathbb{C}$. If $\lim _ { n \rightarrow \infty } z _ { n } = z$, then every
+subsequence and every reordering of $\left( z _ { n } \right) n \in \mathbb { N }$ is also convergent with limit $z$.
