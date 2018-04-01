@@ -1,0 +1,113 @@
+\documentclass[10pt,a4paper,twoside]{article}
+
+% Ränder
+\addtolength{\topmargin}{-16mm}
+\setlength{\oddsidemargin}{25mm}
+\setlength{\evensidemargin}{35mm}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{15cm}
+\addtolength{\textheight}{34mm}
+
+%% 	Language and font encodings
+\usepackage[T1]{fontenc}									% Standard package for selecting font encodings
+\usepackage[utf8]{inputenc}								% Accept different input encodings
+\usepackage[english,ngerman]{babel}				% Multilingual support for Plain TEX or LATEX
+% \usepackage[ngerman]{babel}						% Multilingual support for Plain TEX or LATEX 
+
+%% 	Useful packages
+\usepackage{amsmath} 									% AMS mathematical facilities for LATEX
+\usepackage{graphicx}									% Enhanced support for graphics
+\usepackage{float}
+\usepackage{booktabs} 									% Publication quality tables in LATEX
+\usepackage{tabu}										% Flexible LATEX tabulars
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}	% Extensive support for hypertext in LATEX
+% \usepackage{apacite}									% Citation style following the rules of the APA - comment out if plain style is required
+\usepackage[colorinlistoftodos]{todonotes}				% Marking things to do in a LATEX document - [..,prependcaption, textsize=tiny]
+
+%% 	Optional packages
+\usepackage{rotating}									% Rotation tools, including rotated full-page floats
+\usepackage{enumitem}
+\usepackage{xargs}										% Define commands with many optional arguments
+% \usepackage{amssymb} 									% To use $\checkmark$
+\usepackage{parskip} 								% Entfernt den Einzug bei neuer Zeile und fügt stattdessen einen Abstand ein
+\raggedbottom											 % Verhindert zu große Abstände zwischen 
+
+
+\usepackage{fancyhdr} % Positionierung der Seitenzahlen
+\fancyhead[LE,RO,LO,RE]{}
+\fancyfoot[CE,CO,RE,LO]{}
+\fancyfoot[LE,RO]{\Roman{page}}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{13.6pt} % behebt headheight Warning
+
+% Korrektes Format für Nummerierung von Abbildungen (figure) und
+% Tabellen (table): <Kapitelnummer>.<Abbildungsnummer>
+\makeatletter
+\@addtoreset{figure}{section}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\@addtoreset{table}{section}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\makeatother
+
+% Nicer default font (+ math font) than Computer Modern for most use cases
+\usepackage{mathpazo}
+\usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+
+\usepackage{color}
+\newcommand{\TODO}[1]{{\color{red}\underline{#1}}}
+
+\usepackage{mdframed}
+\newmdenv[
+  linecolor = yellow,
+  leftmargin = 0pt,
+  innerleftmargin = 1em,
+  innertopmargin = 0pt,
+  innerbottommargin = 0pt,
+  innerrightmargin = 0pt,
+  rightmargin = 0pt,
+  linewidth = 3pt,
+  topline = false,
+  rightline = false,
+  bottomline = false
+  ]{leftbar}
+% Document parameters
+\title{Analysis 1}
+\author{}
+
+\begin{document}
+\pagestyle{fancy}
+\pagenumbering{roman} % Römische Seitenzahlen
+\setcounter{page}{1}
+
+\maketitle
+
+\textbf{Informationen zu den Klausuraufgaben:} Die Aufgaben werden sich auf eine Teilmenge der in der Vorlesung behandelten Themen beziehen. Über den folgenden Link gelangen Sie zu einer Seite mit einer 
+\href{http://www.math.lmu.de/~philip/teaching/2017_calc1_forInfAndStatStudents/summary.html}{Themenübersicht der bisherigen Vorlesungen}. 
+Zur Bearbeitung der Aufgaben wird es dabei notwendig sein, in der Vorlesung erworbenes Verständnis zu demonstrieren sowie in der Vorlesung und in den zugehörigen Übungen erlernte Methoden anzuwenden. Es kann also Aufgaben geben, in denen Sie zeigen sollen, dass Sie den Inhalt wichtiger Definitionen und Sätze aus der Vorlesung verstanden haben. Auch kann es kann Aufgaben geben, bei denen mit den erlernten Methoden etwas zu berechnen oder zu beweisen ist. Die Definitionen und Sätze (ohne Beweise und natürlich ohne Nummern aus dem Skript) der folgenden Liste sollten Sie auswendig wissen und anwenden können (zu den Definitionen sollten Sie Beispiele und Gegenbeispiele angeben können und entscheiden können, ob gegebene Objekte die Definition erfüllen oder nicht). 
+
+% Inhaltsverzeichnis erzeugen
+\tableofcontents
+\cleardoublepage
+
+% Arabische Seitenzahlen
+\pagenumbering{arabic}
+\setcounter{page}{1}
+% Geändertes Format für Seitenränder, arabische Seitenzahlen
+% \fancyhead[LE,RO]{\rightmark}
+\fancyhead[LO,RE]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+\include{logik_und_mengenlehre}
+\include{funktionen_und_relationen}
+\include{induktion_rekursion_kardinalitaet}
+\include{reelle_und_komplexe_zahlen}
+\include{funktionsarithmetik_und_polynome}
+\include{konvergenz_reeller_und_komplexer_folgen}
+\include{stetigkeit_plus_zubehoer}
+\include{unendliche_reihen}
+\include{trigonometrische_funktionen}
+\include{differentialrechnung}
+\include{riemannintegral_auf_kompakten_intervallen}
+
+\end{document}
