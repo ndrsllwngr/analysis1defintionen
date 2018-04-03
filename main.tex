@@ -26,6 +26,7 @@
 \usepackage[colorinlistoftodos]{todonotes}				% Marking things to do in a LATEX document - [..,prependcaption, textsize=tiny]
 
 %% 	Optional packages
+\usepackage{pdfpages}
 \usepackage{rotating}									% Rotation tools, including rotated full-page floats
 \usepackage{enumitem}
 \usepackage{xargs}										% Define commands with many optional arguments
@@ -109,5 +110,8 @@ Zur Bearbeitung der Aufgaben wird es dabei notwendig sein, in der Vorlesung erwo
 \include{trigonometrische_funktionen}
 \include{differentialrechnung}
 \include{riemannintegral_auf_kompakten_intervallen}
+
+\section{Appendix}
+\includepdf[pages=-]{pdf/stammfun.pdf}
 
 \end{document}
